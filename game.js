@@ -20,8 +20,17 @@ function nextSequence() {
     playLevelSequence();
 }
 
-//
+// Any key to start
 $(document).on("keydown", function (event) {
+    if (gameStart) {
+
+    } else {
+        nextSequence();
+        gameStart = true;
+    }
+})
+// Press title to start (mobile)
+$("h1").on("click", function () {
     if (gameStart) {
 
     } else {
